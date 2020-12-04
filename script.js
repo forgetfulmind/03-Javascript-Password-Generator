@@ -4,7 +4,7 @@ var generateBtn = document.querySelector("#generate");
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-// Write password to the #password input
+// Write password to the #password field
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
@@ -13,10 +13,11 @@ function writePassword() {
 }
 
 
-// Generate Password 
+// Begin to Gather Data from user 
 
 function generatePassword() {
 
+//Query user on how many characters they would like in their password
   var charCountInput = prompt("How many characters would you like your password to be? Please enter a value between 8 and 128.");
 
   if (charCountInput < 8 || charCountInput > 128 ) {
@@ -72,12 +73,188 @@ function generatePassword() {
     alert("Okay we won't include special characters")
   };
 
-//Write message or return through process
+//Begin 13 combinations of possibilites for user options 
   if (lowerCaseInput && upperCaseInput && numCharInput && specialCharInput) {
-    var fullCharset = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","X","Y","Z",1,2,3,4,5,6,7,8,9,0,"!","@","#","$","%","^","&","*"];
-  
-    return fullCharset[Math.floor(Math.random()*fullCharset.length)];
+    function genPass(){
+      var length = charCountInput;
+      charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*"
+      retVal = "";
+      for (var i = 0; i < length; i++) {
+        retVal += charset.charAt(Math.floor(Math.random() * charset.length));
+      }
+      return retVal;
+    }
+    return genPass();
   }
+  else if (upperCaseInput && numCharInput && specialCharInput) {
+    function genPass2(){
+      var length = charCountInput;
+      charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*"
+      retVal = "";
+      for (var i = 0; i < length; i++) {
+        retVal += charset.charAt(Math.floor(Math.random() * charset.length));
+      }
+      return retVal;
+    }
+    return genPass2();
+  }
+  else if (lowerCaseInput && numCharInput && specialCharInput) {
+    function genPass3(){
+      var length = charCountInput;
+      charset = "abcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*"
+      retVal = "";
+      for (var i = 0; i < length; i++) {
+        retVal += charset.charAt(Math.floor(Math.random() * charset.length));
+      }
+      return retVal;
+    }
+    return genPass3();
+  }
+  else if (lowerCaseInput && upperCaseInput && specialCharInput) {
+    function genPass4(){
+      var length = charCountInput;
+      charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*"
+      retVal = "";
+      for (var i = 0; i < length; i++) {
+        retVal += charset.charAt(Math.floor(Math.random() * charset.length));
+      }
+      return retVal;
+    }
+    return genPass4();
+  }
+  else if (lowerCaseInput && upperCaseInput && numCharInput) {
+    function genPass5(){
+      var length = charCountInput;
+      charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+      retVal = "";
+      for (var i = 0; i < length; i++) {
+        retVal += charset.charAt(Math.floor(Math.random() * charset.length));
+      }
+      return retVal;
+    }
+    return genPass5();
+  }
+  else if (numCharInput && specialCharInput) {
+    function genPass6(){
+      var length = charCountInput;
+      charset = "1234567890!@#$%^&*"
+      retVal = "";
+      for (var i = 0; i < length; i++) {
+        retVal += charset.charAt(Math.floor(Math.random() * charset.length));
+      }
+      return retVal;
+    }
+    return genPass6();
+  }
+  else if (upperCaseInput && specialCharInput) {
+    function genPass7(){
+      var length = charCountInput;
+      charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*"
+      retVal = "";
+      for (var i = 0; i < length; i++) {
+        retVal += charset.charAt(Math.floor(Math.random() * charset.length));
+      }
+      return retVal;
+    }
+    return genPass7();
+  }
+  else if (upperCaseInput && numCharInput) {
+    function genPass8(){
+      var length = charCountInput;
+      charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+      retVal = "";
+      for (var i = 0; i < length; i++) {
+        retVal += charset.charAt(Math.floor(Math.random() * charset.length));
+      }
+      return retVal;
+    }
+    return genPass8();
+  }
+  else if (lowerCaseInput && specialCharInput) {
+    function genPass8(){
+      var length = charCountInput;
+      charset = "abcdefghijklmnopqrstuvwxyz!@#$%^&*"
+      retVal = "";
+      for (var i = 0; i < length; i++) {
+        retVal += charset.charAt(Math.floor(Math.random() * charset.length));
+      }
+      return retVal;
+    }
+    return genPass8();
+  }
+  else if (lowerCaseInput && numCharInput) {
+    function genPass9(){
+      var length = charCountInput;
+      charset = "abcdefghijklmnopqrstuvwxyz1234567890"
+      retVal = "";
+      for (var i = 0; i < length; i++) {
+        retVal += charset.charAt(Math.floor(Math.random() * charset.length));
+      }
+      return retVal;
+    }
+    return genPass9();
+  }
+  else if (lowerCaseInput && upperCaseInput) {
+    function genPass10(){
+      var length = charCountInput;
+      charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+      retVal = "";
+      for (var i = 0; i < length; i++) {
+        retVal += charset.charAt(Math.floor(Math.random() * charset.length));
+      }
+      return retVal;
+    }
+    return genPass10();
+  }
+  else if (lowerCaseInput) {
+    function genPass11(){
+      var length = charCountInput;
+      charset = "abcdefghijklmnopqrstuvwxyz"
+      retVal = "";
+      for (var i = 0; i < length; i++) {
+        retVal += charset.charAt(Math.floor(Math.random() * charset.length));
+      }
+      return retVal;
+    }
+    return genPass11();
+  }
+  else if (upperCaseInput) {
+    function genPass12(){
+      var length = charCountInput;
+      charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+      retVal = "";
+      for (var i = 0; i < length; i++) {
+        retVal += charset.charAt(Math.floor(Math.random() * charset.length));
+      }
+      return retVal;
+    }
+    return genPass12();
+  }
+  else if (numCharInput) {
+    function genPass13(){
+      var length = charCountInput;
+      charset = "1234567890"
+      retVal = "";
+      for (var i = 0; i < length; i++) {
+        retVal += charset.charAt(Math.floor(Math.random() * charset.length));
+      }
+      return retVal;
+    }
+    return genPass13();
+  }
+  else if (specialCharInput) {
+    function genPass13(){
+      var length = charCountInput;
+      charset = "!@#$%^&*"
+      retVal = "";
+      for (var i = 0; i < length; i++) {
+        retVal += charset.charAt(Math.floor(Math.random() * charset.length));
+      }
+      return retVal;
+    }
+    return genPass13();
+  }
+  //Validation alert for not choosing at least one character type
   else {
     alert ("Please choose at least one character type to include")
   };
