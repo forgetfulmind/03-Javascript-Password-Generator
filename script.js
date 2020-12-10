@@ -18,11 +18,13 @@ function writePassword() {
 function generatePassword() {
 
 //Query user on how many characters they would like in their password
-  var charCountInput = prompt("How many characters would you like your password to be? Please enter a value between 8 and 128.");
+  var charCount = prompt("How many characters would you like your password to be? Please enter a value between 8 and 128.");
+  var charCountInput = parseInt(charCount)
 
-  if (charCountInput < 8 || charCountInput > 128 ) {
-    alert("Please enter a valid number of characters")}
-  
+  if (charCountInput < 8 || charCountInput > 128 || isNaN(charCountInput)) {
+    alert("Please enter a valid number of characters")
+  } 
+
   else {
       console.log(charCountInput);
 

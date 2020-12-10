@@ -7,3 +7,4 @@ For this project we are assigned the functionality of a password generator. User
 
 Github repository: (https://github.com/forgetfulmind/03-Javascript-Password-Generator.git)
 Deployed Website: (https://forgetfulmind.github.io/03-Javascript-Password-Generator)
+[Deployed screenshot](./assets/screenshot.JPG)
