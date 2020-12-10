@@ -79,7 +79,7 @@ function generatePassword() {
   if (lowerCaseInput && upperCaseInput && numCharInput && specialCharInput) {
     function genPass(){
       var length = charCountInput;
-      charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*"
+      charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
       retVal = "";
       for (var i = 0; i < length; i++) {
         retVal += charset.charAt(Math.floor(Math.random() * charset.length));
@@ -91,7 +91,7 @@ function generatePassword() {
   else if (upperCaseInput && numCharInput && specialCharInput) {
     function genPass2(){
       var length = charCountInput;
-      charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*"
+      charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
       retVal = "";
       for (var i = 0; i < length; i++) {
         retVal += charset.charAt(Math.floor(Math.random() * charset.length));
@@ -103,7 +103,7 @@ function generatePassword() {
   else if (lowerCaseInput && numCharInput && specialCharInput) {
     function genPass3(){
       var length = charCountInput;
-      charset = "abcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*"
+      charset = "abcdefghijklmnopqrstuvwxyz1234567890!#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
       retVal = "";
       for (var i = 0; i < length; i++) {
         retVal += charset.charAt(Math.floor(Math.random() * charset.length));
@@ -115,7 +115,7 @@ function generatePassword() {
   else if (lowerCaseInput && upperCaseInput && specialCharInput) {
     function genPass4(){
       var length = charCountInput;
-      charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*"
+      charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
       retVal = "";
       for (var i = 0; i < length; i++) {
         retVal += charset.charAt(Math.floor(Math.random() * charset.length));
@@ -139,7 +139,7 @@ function generatePassword() {
   else if (numCharInput && specialCharInput) {
     function genPass6(){
       var length = charCountInput;
-      charset = "1234567890!@#$%^&*"
+      charset = "1234567890!#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
       retVal = "";
       for (var i = 0; i < length; i++) {
         retVal += charset.charAt(Math.floor(Math.random() * charset.length));
@@ -151,7 +151,7 @@ function generatePassword() {
   else if (upperCaseInput && specialCharInput) {
     function genPass7(){
       var length = charCountInput;
-      charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*"
+      charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZ!#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
       retVal = "";
       for (var i = 0; i < length; i++) {
         retVal += charset.charAt(Math.floor(Math.random() * charset.length));
@@ -175,7 +175,7 @@ function generatePassword() {
   else if (lowerCaseInput && specialCharInput) {
     function genPass8(){
       var length = charCountInput;
-      charset = "abcdefghijklmnopqrstuvwxyz!@#$%^&*"
+      charset = "abcdefghijklmnopqrstuvwxyz!#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
       retVal = "";
       for (var i = 0; i < length; i++) {
         retVal += charset.charAt(Math.floor(Math.random() * charset.length));
@@ -247,7 +247,7 @@ function generatePassword() {
   else if (specialCharInput) {
     function genPass13(){
       var length = charCountInput;
-      charset = "!@#$%^&*"
+      charset = "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
       retVal = "";
       for (var i = 0; i < length; i++) {
         retVal += charset.charAt(Math.floor(Math.random() * charset.length));
